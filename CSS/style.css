@@ -96,4 +96,13 @@ ul,li{
     list-style-type: none;
 }
 
+.git{
+    display: flex;
+    justify-content: center;
+    font-family:'Outfit', sans-serif;
+    color: white;
+    cursor: pointer;
+    font-size: 130%;
+}
+
 

@@ -27,6 +27,10 @@
 
                     <a href="connexion.php"div class="connexion">Connexion</a>
                 </div>
+                <br/>
+                <div>
+                    <a href="https://github.com/florent-regnery/module-connexion" class="git">Lien github</a>
+                </div>
                 
         <footer>
                     

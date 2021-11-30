@@ -21,14 +21,14 @@
 
 					if($_SESSION['login'] == "admin" &&  $_SESSION['password'] == "admin"){
 						header("Location: admin.php");
-						var_dump($_SESSION['login']);
+					
 					}
-					$_SESSION['login'] = 'admin' ;
-					$_SESSION['password'] = 'admin';
-					$_SESSION['id'] = $userinfo['id'];
-					$_SESSION['login'] = $userinfo['login'];
-					$_SESSION['password'] = $userinfo['password'];
-					header("Location: infosprofil.php?id=".$_SESSION['id']);
+						$_SESSION['login'] = 'admin';
+						$_SESSION['password'] = 'admin';
+						$_SESSION['id'] = $userinfo['id'];
+						$_SESSION['login'] = $userinfo['login'];
+						$_SESSION['password'] = $userinfo['password'];
+						header("Location: infosprofil.php?id=".$_SESSION['id']);
 				} 
 					else 
 					{
