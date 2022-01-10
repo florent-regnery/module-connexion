@@ -1,3 +1,57 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* fin du reset */
+
+* {
+    box-sizing: border-box;
+}
+
 body{   
     background-color: #A9BCD0;
     font-family:'Outfit', sans-serif; 
@@ -17,28 +71,59 @@ header{
     font-size: large;
 }
 
-footer{ 
-    background-color: #373F51;
-    font-family:'Outfit', sans-serif;
-    bottom:0;
-    width:100%;
-    height:100px;
-    position:absolute;
-    color: white;
+footer {
+    position: fixed;
+    padding: 10px 10px 0px 10px;
+    font-family: 'Outfit', sans-serif;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    background-color:#373F51;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
 }
 
 .contact{
     font-size: large;
 }
 
+.main-box h2 {
+    line-height: 35px;
+}
+
+.main-box span {
+    position: relative;
+}
 .inscription{
     font-family:'Outfit', sans-serif;
     color: cadetblue;
     cursor: pointer;
-    font-size: 220%;
+    position: absolute;
+    padding-left: 5px;
+    padding-right: 5px;
+    transition: all 0.1s;
+    text-decoration: none;
+}
+
+.inscription::after{
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 5px;
+    width: 0%;
+    background: black;
+    height: 2px;
+    transition: all 0.2s;
+}
+.inscription:hover::after{
+    width: 95%;
+}
+.inscription:hover{
+    color:#1B5299;
+    text-decoration: none;
+    font-size: 20px;
+
 }
 
 .connexion{
@@ -47,8 +132,17 @@ footer{
     color: #373F51;
     cursor: pointer;
     font-size: 140%;
+    text-decoration: none;
 
 }
+
+.connexion:hover{
+    color: #1B5299;
+    font-size: 150%;
+    text-decoration: none;
+}
+
+
 .modif{
     font-family:'Outfit', sans-serif;
     text-align: center;
@@ -75,8 +169,8 @@ input{
     font-size: 19px;
     width: 100%;
     height: 51px;
-    padding: 0;
     color: #fff;
+    padding: 0;
     border: 0;
     outline:0;
 }
@@ -104,5 +198,13 @@ ul,li{
     cursor: pointer;
     font-size: 130%;
 }
+
+.git:hover{
+    color: #1B5299;
+    text-decoration: none;
+    font-size: 150%;
+}
+
+
 
 
