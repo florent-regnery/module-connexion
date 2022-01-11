@@ -1,5 +1,6 @@
 <?php
 session_start();
+
 // connexion à la base de donnée
 $bdd = new PDO('mysql:host=localhost;dbname=moduleconnexion', 'root', '');
 
@@ -38,6 +39,7 @@ if (isset($_POST['connexion'])) {
 }
 ?>
 
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -54,9 +56,12 @@ if (isset($_POST['connexion'])) {
 
 <body>
 	<header>
-		<a href="index.php" div class="inscription">Accueil</a>
+		<?php
+		include 'header.php'
+		?>
 	</header>
 	<div align="center">
+		<br />
 		<h1>Connexion</h1>
 		<br />
 		<form method="POST" action="" class="form">
@@ -66,21 +71,18 @@ if (isset($_POST['connexion'])) {
 				<input type="password" name="password" placeholder="Mot de passe.." />
 				<br /><br />
 				<input class=" bouton " type="submit" name="connexion" value="Se connecter" />
-
 			</fieldset>
 		</form>
 		<?php
-
 		if (isset($erreur)) {
 			echo '<br/><font color="red">' . $erreur . "</font><br/>";
 		}
 		?>
 		</br>
-		<a href="formulaire.php" class="connexion">S'inscrire</a><br />
-		<a href="deconnexion" class="connexion">Se deconnecter</a>
 	</div>
 	<footer>
 		<div class="contact">© Copyright 2021 </div>
 	</footer>
 </body>
+
 </html>

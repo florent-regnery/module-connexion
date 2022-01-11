@@ -28,14 +28,15 @@ if (isset($_SESSION['id'])) {
 
 <body>
 	<header>
-
+		<?php
+		include 'header.php'
+		?>
 	</header>
-
 	<div align="center">
-		<h2>Profil de <?= $userinfo['login']; ?></h2>
+		<br />
+		<h1>Profil de <?= $userinfo['login']; ?></h1>
 		<form class="form">
 			<fieldset class="field">
-
 				<br />
 				<p class="text">Votre Pseudo est : <?= $userinfo['login'] ?></p>
 				<br />
@@ -45,19 +46,23 @@ if (isset($_SESSION['id'])) {
 				<br />
 				<p class="text">Votre Mot de passe est : <?= $userinfo['password'] ?></p>
 				<br />
-
 			</fieldset>
 		</form>
 
 		<?php if (isset($userinfo)) : ?>
-			<br />
-			<a href="profil.php" class="modif">Modifier mon profil<br /></a>
-			<a href="deconnexion.php" class="connexion"><br />Se déconnecter</a>
+
 		<?php endif; ?>
+		<?php
+		if ($_SESSION['login'] == "admin") {
+
+			echo '<a href="admin.php" class="admin">Page Admin</a>';
+		}
+		?>
 	</div>
 
 	<footer>
 		<div class="contact">© Copyright 2021 </div>
 	</footer>
 </body>
+
 </html>

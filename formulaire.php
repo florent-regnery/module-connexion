@@ -63,10 +63,13 @@ if (isset($_POST['submit'])) {
 
 <body>
     <header>
-        <a href="index.php" class="inscription">Accueil</a>
+        <?php
+        include 'header.php'
+        ?>
     </header>
     <div align="center">
-        <h1>Inscription</h1>
+        <br />
+        <h1>Inscription</h1><br />
         <form class="form" name="inscription" method="POST" action="" align="center">
             <fieldset>
                 Login<br>
@@ -83,7 +86,6 @@ if (isset($_POST['submit'])) {
                 <input class="bouton" type="submit" name="submit" value="S'inscrire">
             </fieldset>
         </form>
-
         <?php
         if (isset($erreur)) {
             echo '<br/><font color="red">' . $erreur . "</font>";

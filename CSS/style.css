@@ -69,6 +69,7 @@ header{
     justify-content: center;
     color:white;
     font-size: large;
+    justify-content: space-evenly
 }
 
 footer {
@@ -86,6 +87,7 @@ footer {
 
 .contact{
     font-size: large;
+    color: #fff;
 }
 
 .main-box h2 {
@@ -104,6 +106,7 @@ footer {
     padding-right: 5px;
     transition: all 0.1s;
     text-decoration: none;
+    font-size: 20px;
 }
 
 .inscription::after{
@@ -123,37 +126,26 @@ footer {
     color:#1B5299;
     text-decoration: none;
     font-size: 20px;
-
 }
 
 .connexion{
     font-family:'Outfit', sans-serif;
     text-align: center;
-    color: #373F51;
+    color: cadetblue;
     cursor: pointer;
-    font-size: 140%;
+    font-size: 120%;
     text-decoration: none;
-
 }
 
 .connexion:hover{
     color: #1B5299;
-    font-size: 150%;
     text-decoration: none;
 }
 
-
-.modif{
-    font-family:'Outfit', sans-serif;
-    text-align: center;
-    color: rgb(44, 146, 150);
-    cursor: pointer;
-    font-size: 160%;
-}
 .form{
     width: 30%;
-    
 }
+
 .text{
     font-size: large;
 }
@@ -180,6 +172,15 @@ input{
     color: cornflowerblue;
     cursor: pointer;
     font-size: 150%;
+    text-decoration: none;
+}
+.admin:hover{
+    font-family:'Outfit', sans-serif;
+    color: #1B5299;
+    cursor: pointer;
+    font-size: 150%;
+    text-decoration: none;
+
 }
 
 .formadmin{
@@ -203,6 +204,10 @@ ul,li{
     color: #1B5299;
     text-decoration: none;
     font-size: 150%;
+}
+
+h1{
+    font-size: 20px;
 }
 
 

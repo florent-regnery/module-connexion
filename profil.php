@@ -59,24 +59,26 @@ if (isset($_SESSION['id'])) {
 
 	<body>
 		<header>
-
+			<?php
+			include 'header.php'
+			?>
 		</header>
 
 		<body>
 			<div align="center">
-				<h2>Modifier votre profil</h2>
+				<br />
+				<h1>Modifier votre profil</h1>
 				<br /><br />
-				<form method="POST" action="">
+				<form method="POST" action="" class="form">
 					<input type="text" name="newlogin" placeholder="login" value="<?php echo @$user['login'] ?>" /><br /><br />
 					<input type="text" name="newprenom" placeholder="prenom" value="<?php echo @$user['prenom'];  ?>" /><br /><br />
 					<input type="text" name="newnom" placeholder="nom" value="<?php echo @$user['nom'] ?>" /><br /><br />
 					<input type="password" name="newpassword1" placeholder="password" /><br /><br />
 					<input type="password" name="newpassword2" placeholder="confirm password" />
 					<br /><br />
-					<input type="submit" name="modification" value="Modifier" />
+					<input type="submit" class="bouton" name="modification" value="Modifier" />
 				</form>
-				<a href="index.php">Accueil</a>
-				<a href="deconnexion.php">Déconnexion</a>
+
 				<?php
 				if (isset($erreur)) {
 					echo '<font color="red">' . $erreur . "</font>";

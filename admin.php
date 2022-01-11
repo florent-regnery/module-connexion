@@ -24,27 +24,33 @@ $membres = $bdd->query('SELECT * FROM utilisateurs ORDER BY id DESC')
 
 <body>
     <header>
-        <a href="index.php" div class="inscription">Accueil</a>
+        <?php
+        if ($_SESSION['login'] == "admin"){
+            echo '<a href="index.php" class="connexion">Accueil</a>';
+            echo '<a href="deconnexion.php" class="connexion">Deconnexion</a>';
+        }
+        ?>
     </header>
     <div align="center">
-        <h1>Infos des membres</h1>
+        <br />
+        <h1>Infos des membres</h1><br />
         <form class="formadmin">
             <fieldset class="fieldadmin">
                 <ul class="ul">
                     <?php while ($users = $membres->fetch()) { ?>
                         <li class="li">
-                            <p>Id = <?= $users['id'] ?></p>
-                            <p>Identifiant = <?= $users['login'] ?></p>
-                            <p> Prenom = <?= $users['prenom'] ?></p>
-                            <p> Nom = <?= $users['nom'] ?></p>
-                            <p> Password = <?= $users['password'] ?></p>
+                            <p>Id = <?= $users['id'] ?></p><br/>
+                            <p>Identifiant = <?= $users['login'] ?></p><br/>
+                            <p> Prenom = <?= $users['prenom'] ?></p><br/>
+                            <p> Nom = <?= $users['nom'] ?></p></br>
+                            <p> Password = <?= $users['password'] ?></p><br/>
+                            <br />
                         </li>
                     <?php } ?>
                 </ul>
                 <br />
             </fieldset>
         </form>
-        <a href="deconnexion.php">Déconnexion</a>
     </div>
     <footer>
         <div class="contact">© Copyright 2021 </div>

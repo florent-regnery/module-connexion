@@ -1,10 +1,5 @@
 <?php
 session_start();
-if (isset($_SESSION['login'])) {
-    echo "Vous êtes connecté";
-} else {
-    echo "Vous êtes déconnecter";
-}
 
 ?>
 
@@ -24,23 +19,26 @@ if (isset($_SESSION['login'])) {
 
 <body>
     <header>
-        <div>
-        
-        </div>
+        <?php
+        include 'header.php'
+        ?>
     </header>
     <div align="center">
         <div class="main-box">
             <h2><br>Veuillez vous inscrire ! Cliquez sur <span><a href="formulaire.php" class="inscription">Inscription</a></span></h2>
-            <p>Déja inscirt ? <a href="connexion.php" div class="connexion">Connectez-vous</a></p>
+            <br />
+            <p>Déja inscirt ? <a href="connexion.php" class="connexion">Connectez-vous</a></p>
         </div>
         <br />
         <div class="lien">
-            <a href="https://github.com/florent-regnery/module-connexion" class="git">Lien github</a>
+            <br /><a href="https://github.com/florent-regnery/module-connexion" class="git">Lien github</a>
+            <br />
         </div>
     </div>
     <footer>
         <div class="contact">© Copyright 2021 </div>
     </footer>
+
 </body>
 
 </html>

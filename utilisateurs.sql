@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.2
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : mar. 30 nov. 2021 à 15:12
--- Version du serveur :  5.7.31
--- Version de PHP : 7.4.9
+-- Généré le : mar. 11 jan. 2022 à 17:21
+-- Version du serveur : 8.0.27
+-- Version de PHP : 7.4.26
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de données : `florent-regnery_moduleconnexion`
+-- Base de données : `moduleconnexion`
 --
 
 -- --------------------------------------------------------
@@ -29,21 +29,22 @@ SET time_zone = "+00:00";
 
 DROP TABLE IF EXISTS `utilisateurs`;
 CREATE TABLE IF NOT EXISTS `utilisateurs` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `login` varchar(255) CHARACTER SET latin1 NOT NULL,
-  `prenom` varchar(255) CHARACTER SET latin1 NOT NULL,
-  `nom` varchar(255) CHARACTER SET latin1 NOT NULL,
-  `password` varchar(255) CHARACTER SET latin1 NOT NULL,
+  `id` int NOT NULL AUTO_INCREMENT,
+  `login` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `prenom` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `nom` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `password` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=40 DEFAULT CHARSET=utf8mb4;
+) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Déchargement des données de la table `utilisateurs`
 --
 
 INSERT INTO `utilisateurs` (`id`, `login`, `prenom`, `nom`, `password`) VALUES
-(1, 'admin', 'admin', 'admin', 'admin'),
-(39, 'JeanJaques', 'Jean', 'Jaques', 'jcvd');
+(7, 'admin', 'admin', 'admin', 'd033e22ae348aeb5660fc2140aec35850c4da997'),
+(8, 'JeanJaques', 'Jean', 'Jaques', 'f7ed376ba27377ae2680fafe1a67037df80b7e36'),
+(9, 'a', 'a', 'a', '86f7e437faa5a7fce15d1ddcb9eaeaea377667b8');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
