@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : mer. 19 jan. 2022 à 17:15
+-- Généré le : mer. 19 jan. 2022 à 18:21
 -- Version du serveur : 8.0.27
 -- Version de PHP : 7.4.26
 
@@ -35,7 +35,7 @@ CREATE TABLE IF NOT EXISTS `utilisateurs` (
   `nom` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   `password` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb3;
 
 --
 -- Déchargement des données de la table `utilisateurs`
