@@ -44,8 +44,6 @@ if (isset($_SESSION['id'])) {
 				<br />
 				<p class="text">Votre Nom est : <?= $userinfo['nom'] ?></p>
 				<br />
-				<p class="text">Votre Mot de passe est : <?= $userinfo['password'] ?></p>
-				<br />
 			</fieldset>
 		</form>
 

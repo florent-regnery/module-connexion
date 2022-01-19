@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : mar. 11 jan. 2022 à 17:21
+-- Généré le : mer. 19 jan. 2022 à 17:15
 -- Version du serveur : 8.0.27
 -- Version de PHP : 7.4.26
 
@@ -35,16 +35,16 @@ CREATE TABLE IF NOT EXISTS `utilisateurs` (
   `nom` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   `password` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Déchargement des données de la table `utilisateurs`
 --
 
 INSERT INTO `utilisateurs` (`id`, `login`, `prenom`, `nom`, `password`) VALUES
-(7, 'admin', 'admin', 'admin', 'd033e22ae348aeb5660fc2140aec35850c4da997'),
-(8, 'JeanJaques', 'Jean', 'Jaques', 'f7ed376ba27377ae2680fafe1a67037df80b7e36'),
-(9, 'a', 'a', 'a', '86f7e437faa5a7fce15d1ddcb9eaeaea377667b8');
+(10, 'admin', 'admin', 'admin', 'd033e22ae348aeb5660fc2140aec35850c4da997'),
+(11, 'JeanJaques', 'Jaques', 'Jean', '7c1d0198a259343e3c16320c21e48674e3f28198'),
+(12, 'JohnDoe', 'John', 'Doe', '39dfa55283318d31afe5a3ff4a0e3253e2045e43');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -26,8 +26,8 @@ $membres = $bdd->query('SELECT * FROM utilisateurs ORDER BY id DESC')
     <header>
         <?php
         if ($_SESSION['login'] == "admin"){
-            echo '<a href="index.php" class="connexion">Accueil</a>';
-            echo '<a href="deconnexion.php" class="connexion">Deconnexion</a>';
+            echo '<a href="index.php" class="href">Accueil</a>';
+            echo '<a href="deconnexion.php" class="href">Deconnexion</a>';
         }
         ?>
     </header>
@@ -43,7 +43,6 @@ $membres = $bdd->query('SELECT * FROM utilisateurs ORDER BY id DESC')
                             <p>Identifiant = <?= $users['login'] ?></p><br/>
                             <p> Prenom = <?= $users['prenom'] ?></p><br/>
                             <p> Nom = <?= $users['nom'] ?></p></br>
-                            <p> Password = <?= $users['password'] ?></p><br/>
                             <br />
                         </li>
                     <?php } ?>

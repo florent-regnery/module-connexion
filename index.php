@@ -25,11 +25,9 @@ session_start();
     </header>
     <div align="center">
         <div class="main-box">
-            <h2><br>Veuillez vous inscrire ! Cliquez sur <span><a href="formulaire.php" class="inscription">Inscription</a></span></h2>
-            <br />
-            <p>Déja inscirt ? <a href="connexion.php" class="connexion">Connectez-vous</a></p>
+            <h2><br>Cliquez sur le lien qu'il vous faut !</h2>
+            <p>Veuillez trouver ci-dessous le lien vers mon réposite Github : </p>
         </div>
-        <br />
         <div class="lien">
             <br /><a href="https://github.com/florent-regnery/module-connexion" class="git">Lien github</a>
             <br />
